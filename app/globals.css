@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Rubik', sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+input, textarea {
+  font-family: 'Rubik', sans-serif !important;
+  color:#5d6570 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  padding: 15px 20px !important;
+  border: 2px solid #D9DDE0 !important;
+  box-shadow: none !important;
+}
+
+input:focus, textarea:focus{
+  border: 2px solid red !important;
+  box-shadow: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Rubik', sans-serif !important;
+  color:#5d6570 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.font-helvetica{
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.font-rubik{
+  font-family: 'Rubik', sans-serif;
+}
+
+.font-rajdhani{
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.title-style{
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px
+}
+
+.text-style{
+  color: #5d6570;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
