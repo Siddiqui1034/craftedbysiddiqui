@@ -6,48 +6,77 @@ import { ArrowRightOutlined } from "@ant-design/icons";
 
 const LeftSidebar = () => {
   return (
-    <Card
-      className="!border-none !shadow-none !py-[20px] !px-[15px]"
-      cover={
-        <div className="space-y-8">
-            {/* Profile Pic */}
-            <div className="mb-[20px] ">
-            <Image
-                width={400}
-                height={300}
-                className="rounded-lg"
-                alt="example"
-                src="/images/profile.png"
-            />
-            </div>
+   <Card
+  className="!border-none !shadow-none p-0 w-full max-w-[300px] mx-auto"
+  bodyStyle={{ padding: "0px" }}
+>
+  <div className="p-[15px] w-full space-y-6 text-center">
+    {/* Profile Image */}
+    <div>
+      <Image
+        width={290}
+        height={290}
+        className="rounded-lg mx-auto"
+        alt="profile"
+        src="/images/profile.png"
+      />
+    </div>
 
-            {/* Name and Position Block */}
-            <div className="space-y-2 text-center">
-                <p className="text-3xl font-bold font-rubik">Nausheen Siddiqui</p>
-                <p className="text-lg text-gray-800 font-rubik">
-                Software Engineer
-                </p>
-            </div>
+    {/* Name & Role */}
+    <div className="space-y-2">
+      <p className="text-2xl font-bold font-rubik">Nausheen Siddiqui</p>
+      <p className="text-lg text-gray-800 font-rubik">Software Engineer</p>
+    </div>
 
-            {/* Contact Block */}
-            <div className="w-full h-[124px] p-4 bg-zinc-100 rounded-lg flex flex-col items-center justify-center tracking-wider font-rubik text-center text-gray-800 text-base">
-                <p className="">Phone:{" "} <span className="hover:text-rose-400 hover:underline">+01234567890</span></p>
-                <p className="">Email: siddiqui.techsunset@gmail.com</p>
-            </div>
+    {/* Contact Info */}
+    <div className="bg-zinc-100 rounded-lg px-1 py-4 font-rubik text-gray-800 tracking-wider text-base">
+      <p>
+        Phone:{" "}
+        <span className="hover:text-rose-400 hover:underline">
+          +01234567890
+        </span>
+      </p>
+      <p>Email: siddiqui.techsunset@gmail.com</p>
+    </div>
 
-            {/* Download Button */}
-            <div className="">
-                <CustomButton icon={<ArrowRightOutlined />}>
-                    Download My CV
-                </CustomButton>
-            </div>
+    {/* Button */}
+    <div>
+      <CustomButton icon={<ArrowRightOutlined />} className="w-full">
+        Download My CV
+      </CustomButton>
+    </div>
+  </div>
+</Card>
 
-        </div>
-      }
-    >
-        
-    </Card>
   );
 };
 
 export default LeftSidebar;
+
+// Image in ant design card
+
+/* <Card
+      hoverable
+      cover = {
+        <div className="relative w-full h-[180px]">
+            <Image 
+              src="" 
+              layout="fill" 
+              alt=""
+              objectFit='cover'
+            />
+        </div>
+      }
+    >
+      <Card.Meta 
+        title="Men's Blue Jeans
+        description = {
+          <div>
+            <label>$2000</label>
+            <label>$2000</label>
+            <label>$2000</label>
+          </div>
+        }" />
+*/
+
+

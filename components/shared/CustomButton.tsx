@@ -12,7 +12,7 @@ const CustomButton:FC<CustomButtonInterface> = ({htmlType= 'submit' , children, 
   return (
     <Button
       htmlType={htmlType}
-      className={`!w-full !p-8 !text-base !font-medium !rounded-full  ${className || ''}`}
+      className={`!w-full !p-6 !text-base !font-medium !rounded-full  ${className || ''}`}
       type="primary"
       danger
       icon={icon}

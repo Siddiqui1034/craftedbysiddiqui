@@ -1,21 +1,17 @@
 "use client";
 import '@ant-design/v5-patch-for-react-19';
-
 import ChildrenInterface from "@/interfaces/childrenInterface";
 import React, { FC } from "react";
 import Navbar from "./shared/Navbar";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
-import { Card } from "antd";
-import Image from "next/image";
-import { ArrowRightOutlined } from "@ant-design/icons";
-import CustomButton from "./shared/CustomButton";
+import { WhatsAppOutlined } from "@ant-design/icons";
 import RightSidebarButton from './shared/RightSidebarButton';
 import LeftSidebar from './shared/LeftSidebar';
 import Footer from './Footer';
-
-
+import ScrollBottomtoTop from './shared/ScrollBottomtoTop';
 
 const MainLayout: FC<ChildrenInterface> = ({ children }) => {
+
   return (
     <AntdRegistry>
       <div className="min-h-screen flex flex-col font-rubik">
@@ -23,12 +19,12 @@ const MainLayout: FC<ChildrenInterface> = ({ children }) => {
         <Navbar />
 
         {/* Main section */}
-        <main className=" pt-[50px] px-[150px] mb-[10px]">
+        <main className="md:pt-[50px] md:px-[150px] mb-[10px] ">
           <div className="grid grid-cols-[1fr_3fr_0.75fr] text-2xl ">
             <div>
               {/* left aside */}
               <aside className="-mt-65 sticky top-[30px]">
-                <div className="bg-white border-2 border-gray-300 rounded-lg">
+                <div className="bg-white border-2 border-gray-300 rounded-lg w-full md:w-[300px] md:mx-auto">
                   <LeftSidebar />
                 </div>
               </aside>
@@ -53,8 +49,11 @@ const MainLayout: FC<ChildrenInterface> = ({ children }) => {
         </main>
 
         <Footer />
-        
+        <ScrollBottomtoTop />
+
       </div>
+
+
     </AntdRegistry>
   );
 };
