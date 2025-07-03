@@ -11,7 +11,7 @@ const RightSidebarButton: FC<RightSidebarButtonInterface> = ({ href, children })
   return (
     <Link href={href}>
       <Button
-        className="!px-[40px] !h-[80px] !font-rubik !font-normal !text-lg"
+        className="!px-[20px] !h-[40px] md:!px-[40px] md:!h-[80px] !font-rubik !font-normal !text-lg"
         type="primary"
         danger
         block
