@@ -26,7 +26,7 @@ const ScrollBottomtoTop = () => {
     <>
       {
         visibility && (
-        <div onClick={scrollToTop} className="bg-black rounded-full w-[50px] h-[50px] flex items-center justify-center bottom-[20px] right-[50px] fixed">
+        <div onClick={scrollToTop} className="bg-rose-600 rounded-full w-[50px] h-[50px] flex items-center justify-center bottom-[20px] right-[50px] md:right-[20px] fixed">
           <ArrowUpOutlined className="!text-2xl !font-bold !text-white" />
         </div>
       )}

@@ -13,48 +13,31 @@ const WhatsApp: FC<WhatsAppInterface> = ({ bottom }) => {
   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <a
-      href={waLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 bg-green-500 rounded-full pl-3 pr-3 py-2 shadow-lg fixed right-[30px] lg:right-[16px] transition-all duration-300 hover:scale-105 group z-50"
+<div
       style={{ bottom: `${bottom}px` }}
-      title="Chat on WhatsApp"
+      className="fixed right-[50px] md:right-[20px] z-50"
     >
-      
-      <FontAwesomeIcon icon={faWhatsapp} className="text-white text-xl" />
-      <span className="hidden lg:inline text-white font-medium">Chat with me</span>
-    </a>
+      <a
+        href={waLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative group bg-green-500 rounded-full w-[50px] h-[50px] flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+        title="Chat on WhatsApp"
+      >
+        <FontAwesomeIcon icon={faWhatsapp} className="text-white text-xl" />
+
+        {/* Tooltip */}
+        <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+          <div className="bg-black text-white text-xs px-3 py-1 rounded-md whitespace-nowrap shadow-lg">
+            Chat with me
+          </div>
+          <div className="w-2 h-2 bg-black rotate-45 absolute top-full left-1/2 -translate-x-1/2"></div>
+        </div>
+      </a>
+    </div>
+
+
   );
 };
 
 export default WhatsApp;
-
-
-// import { WhatsAppOutlined } from "@ant-design/icons";
-// import Link from "next/link";
-// import React, { FC } from "react";
-
-// interface WhatsAppInterface{
-//     bottom: number
-// }
-
-// const WhatsApp: FC<WhatsAppInterface> = ({bottom}) => {
-//   const phoneNumber = '8765869040'
-//   const message = "Hello Nausheen, I visited your portfolio and would like to connect"
-//   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-  
-//   return (
-//     <Link
-//         href={waLink}
-//         title="Chat on WhatsApp" 
-//         className="flex items-center gap-2 bg-green-500 rounded-full pl-3 pr-4 py-2 shadow-lg fixed right-[50px] transition-all duration-300 hover:scale-105 group" 
-//         style={{position: 'fixed', right: '50px', bottom: `${bottom}px`}}
-//     >
-//         <WhatsAppOutlined className="!text-3xl !font-bold !text-white" />
-//         <span className="hidden md:inline text-white font-medium">Chat with me</span>
-//     </Link>
-//   );
-// };
-
-// export default WhatsApp;

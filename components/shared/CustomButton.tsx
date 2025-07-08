@@ -22,7 +22,7 @@ const CustomButton: FC<CustomButtonInterface> = ({
     <a
       href={href}
       download={download}
-      className={`!w-full !p-4 !text-base !font-medium !rounded-full bg-red-500 text-white flex items-center justify-center gap-2 hover:bg-red-600 transition-all duration-200 ${className}`}
+      className={`!w-full !p-4 !text-base !font-medium !rounded-full bg-rose-600 hover:bg-rose-500 text-white flex items-center justify-center gap-2 transition-all duration-200 ${className}`}
     >
       {children} {icon}
     </a>

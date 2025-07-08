@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const RightSidebarButton = () => {
+const RightSidebar = () => {
   const pathName = usePathname()
   console.log(pathName)
 
@@ -43,4 +43,4 @@ const RightSidebarButton = () => {
   );
 }
 
-export default RightSidebarButton
+export default RightSidebar
