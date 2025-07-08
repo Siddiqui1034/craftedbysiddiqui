@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div className="space-y-4">
 
-      <div className="space-y-6">
+      <div className="space-y-6 animate__animated animate__slideInUp">
         <Title title="About Me" />
         <MainTitle>
           Boost Business Strategic
@@ -29,16 +29,16 @@ const About = () => {
        </SubTitle>
       </div>
 
-      <section className="space-y-8">
+      <section className="space-y-8 animate__animated animate__slideInUp">
         <h1 className="font-bold text-2xl font-rubik capitalize">What I do?</h1>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-8 ">
           <CustomCard />
           <CustomCard />
           <CustomCard />
           <CustomCard />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-[34px] px-[7px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-[34px]">
           
           <div className="flex flex-col space-y-2 md:space-y-5 bg-zinc-100 py-[34px] px-[7px] rounded-lg text-center ">
             <h1 className="font-bold text-[40px] leading-[1.1em] font-helvetica">20k</h1>

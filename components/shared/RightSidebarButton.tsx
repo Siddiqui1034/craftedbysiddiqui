@@ -1,24 +1,45 @@
-import { Button } from 'antd';
+"use client"
 import Link from 'next/link';
-import { FC, ReactNode } from 'react';
+import { usePathname } from 'next/navigation';
 
-interface RightSidebarButtonInterface{
-    href: string
-    children?: ReactNode
-}
+const RightSidebarButton = () => {
+  const pathName = usePathname()
+  console.log(pathName)
 
-const RightSidebarButton: FC<RightSidebarButtonInterface> = ({ href, children }) => {
+  const links = [
+    {label: "About", href: '/about'},
+    {label: "Resume", href: '/resume'},
+    {label: "Work", href: '/work'},
+    {label: "Contact", href: '/contact-us'}
+  ]
+
   return (
-    <Link href={href}>
-      <Button
-        className="!px-[20px] !h-[40px] md:!px-[40px] md:!h-[80px] !font-rubik !font-normal !text-lg"
-        type="primary"
-        danger
-        block
-      >
-        {children}
-      </Button>
-    </Link>
+    <aside className="sticky lg:top-[30px]">
+        <div className="border-2 border-gray-300 rounded-lg p-[20px] flex gap-4 xl:flex-col xl:gap-6 xl:justify-between">
+         {
+          links.map((link)=>(
+            <Link href={link.href} key={`link_${link.href}`}>
+              <button             
+              className={`!font-rubik !font-normal !text-lg 
+              lg:!w-full 
+              lg:p-[30px] 
+              p-[15px]              
+              !rounded-lg 
+              flex items-center justify-center
+              ${pathName === link.href 
+                ? '!bg-red-600 !text-white' 
+                : '!bg-gray-200 !text-black hover:!bg-red-600 hover:!text-white'}
+            `}
+              >
+                
+                {link.label}
+              </button>
+            </Link>
+          ))
+         }
+        </div>
+
+    </aside>
   );
 }
 

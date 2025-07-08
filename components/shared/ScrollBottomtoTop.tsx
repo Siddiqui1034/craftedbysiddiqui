@@ -31,7 +31,7 @@ const ScrollBottomtoTop = () => {
         </div>
       )}
 
-    <WhatsApp bottom={ visibility ? 90 : 20 } />
+    <WhatsApp bottom={ visibility ? 90 : 50 } />
 
     </>
   );

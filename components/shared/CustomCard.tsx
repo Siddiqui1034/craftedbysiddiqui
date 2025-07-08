@@ -7,7 +7,7 @@ const { Meta } = Card;
 
 const CustomCard: React.FC = () => (
   <>
-    <Card className="space-y-4 rounded-2xl border-b-[4px] !bg-zinc-100 !p-2 md:!p-4 shadow-md">
+    <Card className="space-y-4 rounded-2xl border-b-[4px] !bg-zinc-100 !p-2 md:!p-4 shadow-md animate__animated animate__fadeInUp">
       <div className="flex items-center gap-3">
         <div className="bg-rose-500 text-white w-[40px] h-[40px] rounded-full text-xl flex items-center justify-center">
           <CodeOutlined />

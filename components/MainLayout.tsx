@@ -1,5 +1,6 @@
 "use client";
 import "@ant-design/v5-patch-for-react-19";
+import 'animate.css';
 import ChildrenInterface from "@/interfaces/childrenInterface";
 import React, { FC } from "react";
 import Navbar from "./shared/Navbar";
@@ -25,7 +26,7 @@ const MainLayout: FC<ChildrenInterface> = ({ children }) => {
           <aside
             className="sticky xl:top-[30px] flex flex-col md:flex-row lg:flex-col lg:items-center md:gap-4 md:items-stretch 
             lg:justify-center  md:justify-around md:h-[450px] lg:h-[650px] xl:h-[650px] md:w-full  bg-white border-2 border-gray-300 px-[15px] py-[20px] 
-           -mt-20 lg:-mt-0 xl:-mt-50 space-y-10 md:space-y-6 lg:space-y-4 text-start lg:text-center rounded-lg"
+           -mt-35 lg:-mt-0 xl:-mt-50 space-y-10 md:space-y-6 lg:space-y-4 text-start lg:text-center rounded-lg"
           >
             <div className="relative w-full md:w-1/2 xl:w-full lg:flex lg:flex-col lg:justify-center xl:flex-1 h-[434px] md:h-full" >
             {/* Profile Image */}
@@ -56,7 +57,7 @@ const MainLayout: FC<ChildrenInterface> = ({ children }) => {
             </div>
             {/* Button */}
             <div>
-              <CustomButton icon={<ArrowRightOutlined />} className="w-full">
+              <CustomButton href="/files/Nausheen Siddiqui_cv.pdf" download={true} icon={<ArrowRightOutlined />} className="w-full">
                 Download My CV
               </CustomButton>
             </div>
@@ -64,23 +65,13 @@ const MainLayout: FC<ChildrenInterface> = ({ children }) => {
           </aside>
 
 
-          <div className="shadow-lg rounded-lg my-[30px] xl:mx-[25px] p-10">
+          <div className="shadow-lg rounded-lg my-[30px] xl:mx-[20px] p-10">
             {children}
           </div>
 
           <div className="">
             {/* right aside */}
-            <aside className="sticky lg:top-[30px]">
-              <div className="border-2 border-gray-300 rounded-lg p-[20px] flex lg:flex-col gap-2 lg:justify-between">
-                <RightSidebarButton href="/about"> About </RightSidebarButton>
-                <RightSidebarButton href="/resume"> Resume</RightSidebarButton>
-                <RightSidebarButton href="/work"> Work </RightSidebarButton>
-                <RightSidebarButton href="/contact-us">
-                  {" "}
-                  Contact{" "}
-                </RightSidebarButton>
-              </div>
-            </aside>
+            <RightSidebarButton />
           </div>
 
         </main>
